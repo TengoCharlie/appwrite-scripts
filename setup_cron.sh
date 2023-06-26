@@ -1,7 +1,10 @@
 #!/bin/bash
 
-# Set the backup script path
-backup_script="/path/to/init_bkp.sh"
+# Get the directory of the cron setup script
+script_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+
+# Set the backup script path relative to the script directory
+backup_script="$script_dir/init_bkp.sh"
 
 # Set the OneDrive folder path
 onedrive_folder="/path/to/onedrive/folder"
